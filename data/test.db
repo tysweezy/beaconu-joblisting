@@ -1,0 +1,24 @@
+(1) near "databases": syntax error
+(1) near "test2": syntax error
+(1) near "sqlite": syntax error
+---  ----------------------------------------------------------
+0    main                                                                       
+1    temp                                                                       
+seq  name             file                                                      
+---  ---------------  ----------------------------------------------------------
+0    main                                                                       
+1    temp                                                                       
+seq  name             file                                                      
+---  ---------------  ----------------------------------------------------------
+0    main                                                                       
+1    temp                                                                       
+     echo: off
+      eqp: off
+  explain: off
+  headers: off
+     mode: list
+nullvalue: ""
+   output: test.db
+separator: "|"
+    stats: off
+    width: 
