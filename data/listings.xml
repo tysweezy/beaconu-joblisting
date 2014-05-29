@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<DATAPACKET Version="1.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD ATTRNAME="id" FIELDTYPE="Integer" WIDTH="74"/>
+      <FIELD ATTRNAME="job_title" FIELDTYPE="String" WIDTH="1789"/>
+      <FIELD ATTRNAME="company" FIELDTYPE="String" WIDTH="1789"/>
+      <FIELD ATTRNAME="type" FIELDTYPE="String" WIDTH="1789"/>
+      <FIELD ATTRNAME="start_date" FIELDTYPE="Date" WIDTH="74"/>
+      <FIELD ATTRNAME="qualifications" FIELDTYPE="Memo" WIDTH="78"/>
+      <FIELD ATTRNAME="description" FIELDTYPE="Memo" WIDTH="74"/>
+      <FIELD ATTRNAME="email" FIELDTYPE="String" WIDTH="704"/>
+    </FIELDS>
+  </METADATA>
+  <ROWDATA>
+    <ROW id="1" job_title="Survey Programmer" company="Cool Company" type="full-time" start_date="5/30/2014" qualifications="XML, Python, C++" description="In need of a cool Survey programmer." email=""/>
+    <ROW id="2" job_title="Web Developer" company="Company Y" type="full-time" start_date="5/29/2014" qualifications="Python, Django, Nodejs" description="In need of an awesome full-stack developer!" email="test@decipherinc.com"/>
+    <ROW id="3" job_title="Graphic Designer" company="Twitface" type="part-time" start_date="5/29/2014" qualifications="Photoshop, Illustrator" description="Need a killer graphic designer with awesome artistic skills." email="tyler@decipherinc.com"/>
+    <ROW id="4" job_title="Software Engineer" company="Fresh Inc." type="full-time" start_date="5/28/2014" qualifications="Python, Ruby" description="Need a "rock star" engineer for a special project." email="tsouza.sf@gmail.com"/>
+    <ROW id="5" job_title="Nodejs Developer" company="A Company" type="part-time" start_date="5/29/2014" qualifications="Javascript, Nodejs" description="Need a developer." email="company@acompany.com"/>
+  </ROWDATA>
+</DATAPACKET>

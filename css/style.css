@@ -111,3 +111,31 @@ input[type="submit"] {
 /*** Form validation stuff ***/
 span.req {
   color: red; }
+
+span.countdown {
+  position: absolute;
+  right: 9%;
+  bottom: -14em;
+  font-weight: 100;
+  font-style: italic; }
+
+.listing {
+  border-bottom: 4px solid #ddd;
+  background: #f7f7f7;
+  margin: 10px 0; }
+
+.alert-success {
+  background: #DFF2BF;
+  padding: 10px;
+  color: #4F8A10;
+  text-shadow: 0 1px 1px #ccc;
+  margin: 10px 0;
+  display: none; }
+
+.fail {
+  color: #D8000C;
+  background-color: #FFBABA;
+  text-shadow: 0 1px 1px #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  display: none; }

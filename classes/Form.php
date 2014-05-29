@@ -5,6 +5,9 @@
     // Stores Data // Retrieves Data                     *
 **/
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/joblisting/vendor/autoload.php';
+Twig_Autoloader::register();
+
 class Form {
 	protected $db; //db variable (probably don't even need)
 	public $id;
@@ -40,11 +43,16 @@ class Form {
 	/**
 	  * Retrieves All Listings from database
 	  * @todo: Output data in HTML
+	  * echoing ins for losers
 	**/
 	public function getAllData() {
-	 $query = $this->db->prepare('SELECT * FROM listings');
+
+
+	 $query = $this->db->prepare('SELECT * FROM listings ORDER BY ID DESC');
 	 $query->execute();
 	 $rows = array();
+	  $loader = new Twig_Loader_Filesystem('./templates');
+      $twig = new Twig_Environment($loader);
 
 	 if ($query) {
 	 	// get all rows
@@ -53,19 +61,17 @@ class Form {
 	 	}
 
 	 	if ($rows) {
-	 	  foreach($rows as $list) {
-	 	  	/*echo '<pre>';
-	 	  	print_r($list['company']);
-	 	  	echo '</pre>';*/ 
+	 	  //foreach($rows as $list) {}
+		  $template = $twig->loadTemplate('list.phtml');
+          echo $template->render(array (
+          	'rows' => $rows
+          ));
 
-	 	    //output data.
-	 	    /**
-	 	      * @todo: instead of "echo-ing" the data...use a templating engine.
-	 	     **/
-
- 	 	  }
 	 	} else {
-	 		echo 'No listings avaliable';
+	 	  $nores = $twig->loadTemplate('nolist.phtml');
+	 	  echo $nores->render(array(
+	 	  	'rows' => $rows 
+	 	  )); 	
 	 	}
 	 }
 	}

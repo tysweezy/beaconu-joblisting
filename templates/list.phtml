@@ -1,18 +1,15 @@
-
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>BeaconU Job Listing</title>
-	<link rel="stylesheet" href="css/style.css">
+	<title>BeaconU Listings</title>
+    <link rel="stylesheet" href="css/style.css">
 	<!-- twitter bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
 <div class="container">
-
 <header id="header">
 	<div id="logo">
 		<a href="index.php">
@@ -20,73 +17,27 @@
 		</a>
 	</div>
 
-	<h1 id="page-title">Post A Job</h1>
+	<h1 id="page-title">Job Listings</h1>
 </header>
 
-
-
-<div class="alert alert-success">Job listing posted successfully <a href="listings.php">View Listings >></a></div>
-
-
-
-<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-	
-        <label for="job-title">
-	 		<span class="title"><span class="req">*</span>Job Title</span>
-			<input type="text" name="job-title" placeholder="Job Title"> 
-		</label>
-	
-
-	
-		<label for="company">
-			<span class="title"><span class="req">*</span>Company</span><input type="text" name="company" placeholder="Company">
-		</label>
-
-	
-	
-  
-	<label for="email">
-		<span class="title"><span class="req">*</span>Email</span><input type="email" name="email" placeholder="Email">
-	</label>
+ {% for row in rows %}
  
-
-	<label for="type"><span class="title">Type</span>
-		<select name="type" id="">
-			<option value="full-time">Full-Time</option>
-			<option value="part-time">Part-Time</option>
-			<option value="freelance">Freelance</option>
-		</select>
-
-	</label>
   
-	
-	<label for="date">
-		<span class="title">Start Date</span><input type="date" name="date">
-	</label>
-
-	<label for="qualifications">
-		<span class="title">Qualifications</span><input type="text" name="qualifications" placeholder="Qualifications">
-	</label>
-
-	<label for="description">
-		<span class="title">Description</span><textarea name="description" class="message" cols="100" rows="7" maxlength="2000"></textarea>
-		<span class="countdown"></span>
-	</label>
-
-	
+  <div class="listing" id="{{ row.id }}">
+	<h2>{{ row.job_title }}</h2>
+	<h3>{{ row.company }}</h3>
+	<div>{{ row.email }}</div>
+	<div>{{ row.type }}</div>
+	<div>{{ row.start_date }}</div>
+	<div>{{ row.qualifications }}</div>
+	<div>{{ row.description }}</div>
+  </div>
 
 
-	<input type="submit" value="Post" name="submit" class="btn">
-		
 
 
-	
-</form>
+ {% endfor %}
+
 </div><!-- /container -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<!--<script type="text/javascript" src="js/jquery.validate.min.js"></script>-->
-<script type="text/javascript" src="js/main.js"></script>
-
-
 </body>
 </html>

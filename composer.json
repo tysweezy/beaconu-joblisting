@@ -1,0 +1,15 @@
+{
+    "name": "decipher/joblisting",
+    "require-dev": {
+        "twig/twig": "*"
+    },
+    "authors": [
+        {
+            "name": "Tyler Souza",
+            "email": "tyler@decipherinc.com"
+        }
+    ],
+    "require": {
+
+    }
+}
