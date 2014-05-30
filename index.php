@@ -25,8 +25,8 @@
 
 
 
-<div class="alert alert-success">Job listing posted successfully <a href="listings.php">View Listings >></a></div>
-
+<!--<div class="alert alert-success">Job listing posted successfully <a href="listings.php">View Listings >></a></div>-->
+<!--<div class="alert alert-danger">Uh oh! Something went wrong...</div>-->
 
 
 <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
