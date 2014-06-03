@@ -122,7 +122,14 @@ span.countdown {
 .listing {
   border-bottom: 4px solid #ddd;
   background: #f7f7f7;
-  margin: 10px 0; }
+  margin: 10px 0;
+  padding: 5px 0 19px 31px;
+  position: relative; }
+  .listing h2 {
+    color: #fa2; }
+  .listing h3 {
+    font-weight: 300;
+    font-style: italic; }
 
 .alert-success {
   background: #DFF2BF;
@@ -172,3 +179,36 @@ span.success {
 span.right {
   float: right;
   padding-right: 10px; }
+
+span.company {
+  font-size: .6em;
+  color: #aaa; }
+
+p.qualifications {
+  font-weight: 400;
+  color: #aaa;
+  font-style: italic; }
+
+span.type {
+  padding: 5px;
+  background: #00afa4;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px #aaa; }
+
+.list-right {
+  position: absolute;
+  right: 1%;
+  top: 40%; }
+  .list-right span {
+    display: block; }
+
+span.date {
+  font-style: italic;
+  color: #999; }
+
+p {
+  color: #999; }
+
+p.description {
+  width: 50%; }
