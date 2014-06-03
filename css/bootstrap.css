@@ -1243,7 +1243,9 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
-  }
+  
+    position: relative;
+}
   .col-lg-1,
   .col-lg-2,
   .col-lg-3,

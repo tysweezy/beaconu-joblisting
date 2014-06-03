@@ -26,6 +26,8 @@ if (!empty($errors)) {
   	$form = new Form('sqlite:../data/listings.db'); 
 	$post = $form->storeData();
 	return $post;
+	header('Location: http://localhost/joblisting/listings.php');
+	
 
 	$data['success'] = true;
 	$data['message'] = 'Success';

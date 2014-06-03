@@ -2,6 +2,7 @@
     "name": "decipher/joblisting",
     "require-dev": {
         "twig/twig": "*"
+
     },
     "authors": [
         {
@@ -10,6 +11,6 @@
         }
     ],
     "require": {
-
+        "wixel/gump": "dev-master"
     }
 }

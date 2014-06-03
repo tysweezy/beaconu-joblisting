@@ -105,6 +105,8 @@ class Form {
 	  * Removes the data
 	**/
 	public function removeData() {
-
+		
 	}
+
+
 }

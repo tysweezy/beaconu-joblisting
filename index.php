@@ -1,4 +1,7 @@
-
+<?php 
+require_once 'vendor/autoload.php'; 
+require_once '/classes/Form.php';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,10 +30,45 @@
 
 <!--<div class="alert alert-success">Job listing posted successfully <a href="listings.php">View Listings >></a></div>-->
 <!--<div class="alert alert-danger">Uh oh! Something went wrong...</div>-->
+<?php
+
+$form = new Form('sqlite:data/listings.db');
+
+$gump = new GUMP();
+
+$_POST = $gump->sanitize($_POST);
+
+$gump->validation_rules(array(
+	'job-title' => 'required',
+	'company'   => 'required',
+	'email'     => 'required|valid_email'
+));
+
+$gump->filter_rules(array(
+	'job-title'  => 'trim|sanitize_string',
+	'company'    => 'trim|sanitize_string',
+	'email'      => 'trim|sanitize_email'
+));
+
+$validation_data = $gump->run($_POST);
+
+if (isset($_POST['submit'])) {
+	if ($validation_data === false) {
+		echo $gump->get_readable_errors(true);
+	} else {
+		echo '<span class="success">Success! Job Posted Successfully. <span class="right"><a href="listings.php">View Listings >></a></span></span>';
+		$form->storeData();
+	}
+}
 
 
-<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+?>
 	
+
+
+<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+
+
         <label for="job-title">
 	 		<span class="title"><span class="req">*</span>Job Title</span>
 			<input type="text" name="job-title" placeholder="Job Title"> 
@@ -39,7 +77,7 @@
 
 	
 		<label for="company">
-			<span class="title"><span class="req">*</span>Company</span><input type="text" name="company" placeholder="Company">
+			<span class="title"><span class="req">*</span>Company</span><input type="text" name="company" placeholder="Company" >
 		</label>
 
 	
@@ -73,15 +111,11 @@
 		<span class="countdown"></span>
 	</label>
 
-	
-
-
 	<input type="submit" value="Post" name="submit" class="btn">
 		
-
-
-	
 </form>
+
+
 </div><!-- /container -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <!--<script type="text/javascript" src="js/jquery.validate.min.js"></script>-->
