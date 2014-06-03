@@ -26,12 +26,14 @@ class Form {
 	*/
 	public function __construct($_conn) {
       //$data = $this->db; //tried to shorten the object 
-	  $this->_conn = $_conn;
-    try {
- 		$this->db = new PDO($this->_conn) or die('cannot connect to database');
- 	 } catch(PDOException $e) {
- 		die($e->getMessage());
- 	 } 
+		$this->_conn = $_conn;
+    	try {
+ 				
+ 				$this->db = new PDO($this->_conn) or die('cannot connect to database');
+ 	 		
+ 	 		} catch(PDOException $e) {
+ 				die($e->getMessage());
+ 	 		} 
 	}
 
 

@@ -176,10 +176,6 @@ span.success {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px; }
 
-span.right {
-  float: right;
-  padding-right: 10px; }
-
 span.company {
   font-size: .6em;
   color: #aaa; }
@@ -212,3 +208,22 @@ p {
 
 p.description {
   width: 50%; }
+
+a#postJobBtn {
+  background: #00afa4;
+  color: #fff;
+  text-shadow: 0 1px 1px #aaa;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #007F77;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  width: 15%;
+  margin-left: 85%; }
+  a#postJobBtn:hover {
+    opacity: 0.8;
+    text-decoration: none; }

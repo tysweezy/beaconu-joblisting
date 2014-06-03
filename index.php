@@ -1,6 +1,6 @@
 <?php 
 require_once 'vendor/autoload.php'; 
-require_once '/classes/Form.php';
+require_once 'classes/Form.php';
 ?>
 <!doctype html>
 <html lang="en">

@@ -204,10 +204,6 @@ span.success {
 	@include border-radius(2px);
 }
 
-span.right {
-	float: right;
-	padding-right: 10px;
-}
 
 span.company {
 	font-size: .6em;
@@ -250,4 +246,25 @@ p {
 
 p.description {
 	width: 50%;
+}
+
+a#postJobBtn {
+	background: #00afa4;
+  color: #fff;
+  text-shadow: 0 1px 1px #aaa;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #007F77;
+  @include border-radius(5px);
+  font-weight: bold;
+ 	display: block;
+ 	text-align: center;
+ 	width: 15%;
+ 	margin-left: 85%;
+
+
+  &:hover {
+		opacity: 0.8;
+		text-decoration: none;
+  }
 }
