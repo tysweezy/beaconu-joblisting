@@ -5,7 +5,7 @@
     // Stores Data // Retrieves Data                     *
 **/
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/joblisting/vendor/autoload.php';
+require_once 'vendor/autoload.php';
 Twig_Autoloader::register();
 
 class Form {
@@ -59,15 +59,18 @@ class Form {
 	 if ($query) {
 	 	// get all rows
 	 	while($row = $query->fetch(PDO::FETCH_ASSOC)) {
-	 		$rows[] = $row;
+	 		 $rows[] = $row;
+
+	 		
 	 	}
 
 	 	if ($rows) {
 	 	  //foreach($rows as $list) {}
 		  $template = $twig->loadTemplate('list.phtml');
-          echo $template->render(array (
+         echo $template->render(array (
           	'rows' => $rows
           ));
+
 
 	 	} else {
 	 	  // display template if no results.
@@ -77,6 +80,15 @@ class Form {
 	 	  )); 	
 	 	}
 	 }
+	}
+
+  /**
+  	* Get's only description
+  	* Fixes textarea linebreak issue
+  	*  
+  **/
+	public function getDesscription() {
+		 $desc = $this->db->prepare('SELECT `description` FROM listings');
 	}
 
 	/** 
@@ -112,3 +124,4 @@ class Form {
 
 
 }
+

@@ -71,20 +71,25 @@ if (isset($_POST['submit'])) {
 
         <label for="job-title">
 	 		<span class="title"><span class="req">*</span>Job Title</span>
-			<input type="text" name="job-title" placeholder="Job Title"> 
+			<input type="text" name="job-title" placeholder="Job Title" value="<?php 
+			                                                       if(isset($_POST['job-title'])) {echo htmlspecialchars($_POST['job-title']); }?>"> 
 		</label>
 	
 
 	
 		<label for="company">
-			<span class="title"><span class="req">*</span>Company</span><input type="text" name="company" placeholder="Company" >
+			<span class="title"><span class="req">*</span>Company</span>
+			<input type="text" name="company" placeholder="Company" value="<?php 
+																													if (isset($_POST['company'])) {echo htmlspecialchars($_POST['company']); }?>">
 		</label>
 
 	
 	
   
 	<label for="email">
-		<span class="title"><span class="req">*</span>Email</span><input type="email" name="email" placeholder="Email">
+		<span class="title"><span class="req">*</span>Email</span>
+		<input type="email" name="email" placeholder="Email" value="<?php 
+																											if (isset($_POST['email'])) {echo htmlspecialchars($_POST['email']);} ?>">
 	</label>
  
 
@@ -99,15 +104,18 @@ if (isset($_POST['submit'])) {
   
 	
 	<label for="date">
-		<span class="title">Start Date</span><input type="date" name="date">
+		<span class="title">Start Date</span>
+		<input type="date" name="date" value="<?php if (isset($_POST['date'])) {htmlspecialchars($_POST['date']);} ?>">
 	</label>
 
 	<label for="qualifications">
-		<span class="title">Qualifications</span><input type="text" name="qualifications" placeholder="Qualifications">
+		<span class="title">Qualifications</span>
+		<input type="text" name="qualifications" placeholder="Qualifications" value="<?php if(isset($_POST['qualifications'])) {htmlspecialchars($_POST['qualifications']);} ?>">
 	</label>
 
 	<label for="description">
-		<span class="title">Description</span><textarea name="description" class="message" cols="100" rows="7" maxlength="2000"></textarea>
+		<span class="title">Description</span>
+		<textarea name="description" class="message" cols="100" rows="7" maxlength="4000" value="<?php if(isset($_POST['description'])) {htmlspecialchars($_POST['description']);}  ?>"></textarea>
 		<span class="countdown"></span>
 	</label>
 

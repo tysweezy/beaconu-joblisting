@@ -30,7 +30,7 @@
 	<h2>{{ row.job_title }} <span class="company">@ {{ row.company }}</span></h2>
 	<p class="qualifications">Requirments: {{ row.qualifications }}</p>
 	<p>Posted by: <a href="mailto:{{ row.email }}">{{row.email}}</a></p>
-	<p class="description">Description: {{ row.description }}</p>
+	<p class="description">Description: <br /> {{ row.description | nl2br }} </p>
  </div>
 
  <div class="list-right">
@@ -39,21 +39,9 @@
  	 <span class="date">Start Date: {{ row.start_date }}</span>
  </div>
 	
+</div><!-- /listing -->
 
-		
-	
-			
-			
-			
-
-			
-	
-  </div><!-- /listing -->
-
-
-
-
- {% endfor %}
+{% endfor %}
 
 </div><!-- /container -->
 </body>
