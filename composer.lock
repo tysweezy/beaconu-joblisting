@@ -4,8 +4,50 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1c9e4bfc2ed942433ac454188f52a54f",
+    "hash": "866d2dab249256d8f0d950d6286b7fd1",
     "packages": [
+        {
+            "name": "voodoophp/paginator",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mardix/Paginator.git",
+                "reference": "d7f67a26001472fe9bb6548b6d75b47eb89ed201"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mardix/Paginator/zipball/d7f67a26001472fe9bb6548b6d75b47eb89ed201",
+                "reference": "d7f67a26001472fe9bb6548b6d75b47eb89ed201",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Voodoo": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mardix",
+                    "homepage": "http://github.com/mardix",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Paginator is a simple class that allows you to create pagination. It doesn't require any database connection. It is compatible with Twitter's Bootstrap Framework, by using the CSS class pagination that is also attached.",
+            "homepage": "https://github.com/mardix/Paginator",
+            "keywords": [
+                "page",
+                "pagination"
+            ],
+            "time": "2013-06-25 05:03:25"
+        },
         {
             "name": "wixel/gump",
             "version": "dev-master",

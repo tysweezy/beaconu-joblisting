@@ -98,8 +98,8 @@ class Form {
 	**/
 	public function storeData() {
 
-      $data = $this->db->prepare('INSERT INTO listings (job_title, company, type, start_date, qualifications, description, email) 
-      	                         VALUES (:jobtitle, :company, :type, :start_date, :qualifications, :description, :email)');
+      $data = $this->db->prepare('INSERT INTO listings (job_title, company, type, start_date, qualifications, description, email, salaryrange) 
+      	                         VALUES (:jobtitle, :company, :type, :start_date, :qualifications, :description, :email, :salaryrange)');
 
       $data->bindParam(':jobtitle', $_POST['job-title'], PDO::PARAM_STR);
       $data->bindParam(':company', $_POST['company'], PDO::PARAM_STR);
@@ -108,6 +108,7 @@ class Form {
       $data->bindParam(':qualifications', $_POST['qualifications'], PDO::PARAM_STR);
       $data->bindParam(':description', $_POST['description'], PDO::PARAM_STR);
       $data->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
+      $data->bindParam(':salaryrange', $_POST['salary'], PDO::PARAM_STR);
 
 
 

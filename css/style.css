@@ -190,12 +190,15 @@ span.type {
   background: #00afa4;
   color: #fff;
   text-transform: uppercase;
-  text-shadow: 0 1px 1px #aaa; }
+  text-shadow: 0 1px 1px #767676;
+  width: 159px;
+  text-align: center;
+  font-weight: bold; }
 
 .list-right {
   position: absolute;
   right: 1%;
-  top: 40%; }
+  top: 11px; }
   .list-right span {
     display: block; }
 
@@ -227,3 +230,23 @@ a#postJobBtn {
   a#postJobBtn:hover {
     opacity: 0.8;
     text-decoration: none; }
+
+.readmore-js-expanded {
+  height: auto !important; }
+
+/*** Apply Button ***/
+.applyBtn {
+  background: #fa2;
+  color: #fff;
+  text-shadow: 0 1px 1px #767676;
+  padding: 10px 30px 10px 30px;
+  margin: 10px 0 0 20%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  position: absolute;
+  border-bottom: 3px solid #E79A1F; }
+  .applyBtn:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8; }

@@ -217,25 +217,23 @@ p.qualifications {
 }
 
 span.type {
-
   padding: 5px;
 	background: #00afa4;
 	color: #fff;
 	text-transform: uppercase;
-	text-shadow: 0 1px 1px #aaa;
+	text-shadow: 0 1px 1px #767676;
+	width: 159px;
+	text-align: center;
+	font-weight: bold;
 }
 
-.list-right {
+.list-right { 
   position: absolute;
   right: 1%;
-  top: 40%;
+  top: 11px;;
 	span {
 		display: block;
 	}
-}
-
-.list-left {
-
 }
 
 span.date {font-style: italic; color: #999;}
@@ -267,4 +265,27 @@ a#postJobBtn {
 		opacity: 0.8;
 		text-decoration: none;
   }
+}
+
+.readmore-js-expanded {
+	height: auto !important
+}
+
+/*** Apply Button ***/
+.applyBtn {
+	background: #fa2;
+	color: #fff;
+	text-shadow: 0 1px 1px #767676;
+	padding: 10px 30px 10px 30px;
+	margin: 10px 0 0 20%;
+	@include border-radius(5px);
+	position: absolute;
+	border-bottom: 3px solid #E79A1F;
+
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+		opacity: 0.8;
+	}
+
 }
