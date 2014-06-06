@@ -1,7 +1,8 @@
 {
     "name": "decipher/joblisting",
     "require-dev": {
-        "twig/twig": "*"
+        "twig/twig": "*",
+        "slim/slim" : "2.*"
 
     },
     "authors": [
@@ -13,5 +14,6 @@
     "require": {
         "wixel/gump": "dev-master",
         "voodoophp/paginator" : "2.*"
+
     }
 }
