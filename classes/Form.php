@@ -9,7 +9,7 @@ require_once 'vendor/autoload.php';
 Twig_Autoloader::register();
 
 class Form {
-	protected $db; //db variable (probably don't even need)
+	public $db; //db variable (probably don't even need)
 	public $id;
 	public $jobtitle;
 	public $company;
@@ -60,8 +60,6 @@ class Form {
 	 	// get all rows
 	 	while($row = $query->fetch(PDO::FETCH_ASSOC)) {
 	 		 $rows[] = $row;
-
-	 		
 	 	}
 
 	 	if ($rows) {
@@ -81,6 +79,76 @@ class Form {
 	 	}
 	 }
 	}
+
+
+ public function retrieveApply() {
+
+
+	 $query = $this->db->prepare('SELECT * FROM listings ORDER BY ID DESC');
+	 $query->execute();
+	 $rows = array();
+	 $loader = new Twig_Loader_Filesystem('./templates');
+     $twig = new Twig_Environment($loader);
+
+	 if ($query) {
+	 	// get all rows
+	 	while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+	 		 $rows[] = $row;
+
+	 		
+	 	}
+
+	 	/*if ($rows) {
+	 
+		  $template = $twig->loadTemplate('apply.phtml');
+         echo $template->render(array (
+          	'rows'           => $rows
+           ));
+
+
+
+	 	} else {
+	 	  
+	 	  $nores = $twig->loadTemplate('nolist.phtml');
+	 	  echo $nores->render(array(
+	 	  	'rows' => $rows 
+	 	  )); 	
+	 	}*/
+	 }
+	}
+
+  /***
+    * Retrives ID from DB
+    * Purpose -- To get id value to relate apply page to post
+  ***/
+	public function getId() {
+	  $query = $this->db->prepare('SELECT `id ` FROM listings');
+	  //$query->execute();
+	  $rows = array();
+
+	   $loader = new Twig_Loader_Filesystem('./templates');
+     $twig = new Twig_Environment($loader);
+
+
+
+     if ($query) {
+
+
+       if ($rows) {
+       	$template = $twig->loadTemplate('apply.phtml');
+         echo $template->render(array (
+         		'rows' => $rows
+         ));
+       } else {
+       	 $err = $twig->loadTemplate('404.phtml');
+       	 echo $err->render();
+       }
+
+
+
+     }
+
+}	
 
   /**
   	* Get's only description
