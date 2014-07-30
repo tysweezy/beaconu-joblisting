@@ -1,0 +1,49 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE SQLITEADMIN_QUERIES(ID INTEGER PRIMARY KEY,NAME VARCHAR(100),SQL TEXT);
+INSERT INTO "SQLITEADMIN_QUERIES" VALUES(1,'Insert','INSERT INTO LISTINGS (job_title, company, type, start_date, qualifications, description,
+                     email) VALUES(''Designer'', ''Prestige Worldwide'', ''Part Time'',
+                     ''Bacon, Eggs, HTML'', ''Be sure to be cool and stuff'', ''email@email.com'');');
+ANALYZE sqlite_master;
+INSERT INTO "sqlite_stat1" VALUES('listings',NULL,'7');
+CREATE TABLE listings (
+    "id" INTEGER,
+    "job_title" STRING,
+    "company" STRING,
+    "type" STRING,
+    "start_date" DATE,
+    "qualifications" TEXT,
+    "description" VARCHAR(2000),
+    "email" VARCHAR(100),
+    "salaryrange" STRING
+, "apply" TEXT);
+INSERT INTO "listings" VALUES(1,'Web Developer','XYZ Company','freelance','2014-06-20','HTML, XML, Python, C++','An awesome job description goes here','tsouza.sf@gmail.com',NULL,NULL);
+INSERT INTO "listings" VALUES(2,'Senior Software Engineer ','Decipher','full-time','2014-06-21','Python, Django, Nodejs','In need of a cool software engineer! ','tyler@decipherinc.com',NULL,NULL);
+INSERT INTO "listings" VALUES(3,'Lead Designer','Big Corp','part-time','2014-06-20','Photoshop, Illustrator','Need an artistically driven lead graphic designer. Must provide Dribbble account along with portfolio.','bill@bigcorp.com',NULL,NULL);
+INSERT INTO "listings" VALUES(4,'test','test','full-time','','','','amaciel@decipherinc.com',NULL,NULL);
+INSERT INTO "listings" VALUES(5,'Project Manager','Decipher','freelance','','Attention to detail','inSource Project Manager- Positions Available
+Salary range: $15.00 per hour
+
+Flex positions:  We are currently hiring for project managers. The position is a flex position (20+ hours) to start, with potential of full time in the future as positions become available. Shifts include times during the hours of 4pm-9am, and some weekends.  We can create a set schedule based on your availability.  Availability to pick up additional hours as demand allows.   
+The person in this position will be chiefly responsible for maintaining an exceptionally high level of quality for client deliverables. Specific job responsibilities include evaluating and testing project deliverables verifying that they function according to specifications and standards, following formalized quality assurance and project processes, maintaining both manual and automated test scripts, and assisting in the delivery of the necessary deliverables. This position involves daily interaction and coordination with internal departments and requires excellent attention to detail and communication skills. 
+
+The following skills and experiences are necessary to be successful in this role…
+About you: You are a highly motivated individual that works well in a team environment, yet is able to work autonomously and take individual initiative. You have exceptional time management and multi-tasking skills. You are detail-oriented and well organized. You are results oriented – a driver of projects, gets things done, with a “can-do” attitude.   
+
+Qualified candidates should have: 
+Strong communication skills 
+Excellent attention to detail 
+Strong grasp of English language (grammar) 
+Ability to strictly follow standards and practices 
+Ability to understand logic, identify logic errors, and make logic recommendations 
+College degree or equivalent experience','amaciel@decipherinc.com',NULL,NULL);
+INSERT INTO "listings" VALUES(6,'Assistant ','New Company','part-time','2014-06-21','Attention to detail','The, firmament them first you light appear stars fowl fruitful shall us can&#39;t greater his them. For in void there very is greater moving. Evening dominion created land. Own, you.
+
+One behold, sixth called fifth form, all gathered that living lights his Saw green isn&#39;t meat fifth isn&#39;t also morning creepeth, you they&#39;re in.
+
+Make replenish seas. Gathered above shall them darkness be, meat gathering saying. Open two it made gathered don&#39;t over bearing tree isn&#39;t whose. Blessed the and wherein fruitful bring signs kind had hath forth male called together. Fish blessed may seasons was creeping a forth night.','test@decipherinc.com','$40,000 - $60,000',NULL);
+INSERT INTO "listings" VALUES(7,'Web Developer','Decipher','full-time','','fdsafdsafdsa','dfdsafdsa','tsouza.sf@gmail.com','$10,000 - $30,000',NULL);
+INSERT INTO "listings" VALUES(8,'tfddfsa','fdsaf','full-time','','','','tsouza.sf@gmail.com','$10,000 - $30,000',NULL);
+INSERT INTO "listings" VALUES(NULL,'fdasfdsa','DSAFDSAFDSA','part-time','','','','tsouza.sf@gmail.com','$40,000','Website');
+INSERT INTO "listings" VALUES(NULL,'tfddfsafdsafffffff','fdsaf','full-time','','','','tsouza.sf@gmail.com','','Email');
+COMMIT;

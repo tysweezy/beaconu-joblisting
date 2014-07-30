@@ -1,0 +1,20 @@
+{
+    "name": "decipher/joblisting",
+    "require-dev": {
+        "twig/twig": "*",
+        "slim/slim" : "2.*"
+
+    },
+    "authors": [
+        {
+            "name": "Tyler Souza",
+            "email": "tyler@decipherinc.com"
+        }
+    ],
+    "require": {
+        "wixel/gump": "dev-master",
+        "voodoophp/paginator" : "2.*",
+        "swiftmailer/swiftmailer": "5.2.*@dev"
+
+    }
+}

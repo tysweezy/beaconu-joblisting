@@ -1,0 +1,80 @@
+<a href="postjob" id="postJobBtn">Post a job</a>
+
+ 
+<div class="scroll">
+ {% for row in rows %}
+ <div class="listing" id="{{ row.id }}">
+ <div class="list-left">
+	<h2>{{ row.job_title }} <span class="company">@ {{ row.company }}</span></h2>
+	
+
+	<p class="qualifications">Requirements: 
+		{% if row.qualifications == false %}
+			None
+		{% else %}
+			{{ row.qualifications }}
+		{% endif %}
+	</p>
+	
+
+	<p>Posted by: <a href="mailto:{{ row.email }}">{{row.email}}</a></p>
+	<p>Salary Range: 
+		{% if row.salaryrange == false %}
+			<span>N/A</span>
+
+		{% else %}
+			{{ row.salaryrange }} Per Year
+		{% endif %}
+
+	</p>
+
+	<p class="description">Description: <br /> 
+	  {% if row.description == false %}
+			<span>No description</span>
+		{% else %}
+			{{ row.description | nl2br }} 
+		{% endif %}
+	</p>
+ </div>
+
+ <div class="list-right">
+ 	<span class="type">{{ row.type }}</span>
+	 
+ 	 <span class="date">Start Date: 
+
+ 	 	{% if row.start_date == false %}
+ 	 		<span>N/A</span>
+		{% else %}
+ 	 		{{ row.start_date }}
+		{% endif %}
+ 	 </span>
+
+ 	    {% if row.apply == false %}
+      	
+      {% else %}
+ 	<span class"apply" style="color:#999; font-style: italic;">Best way to apply: {{ row.apply }}</span>
+
+ 	  {% endif %}
+
+  <a href="apply/{{row.id}}" class="applyBtn">Apply</a>
+
+
+  	<!--<button class="deletePost" id="{{ row.id }}" style="position: absolute; top: 142px; right: 26%;" name="delete">Delete Post</button> 
+
+  	<a href="update/{{row.id}}" class="updatePostBtn">Edit</a>-->
+
+
+
+
+ </div><!-- /list-right -->
+
+
+</div><!-- /listing -->
+
+{% endfor %}
+
+</div>
+
+
+
+
