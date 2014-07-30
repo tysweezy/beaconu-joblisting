@@ -32,7 +32,11 @@ require_once 'classes/Form.php';
 <!--<div class="alert alert-danger">Uh oh! Something went wrong...</div>-->
 <?php
 
+<<<<<<< HEAD
 $form = new Form();
+=======
+$form = new Form('sqlite:data/listings.db');
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 
 $gump = new GUMP();
 
@@ -81,6 +85,12 @@ if (isset($_POST['submit'])) {
 																													if (isset($_POST['company'])) {echo htmlspecialchars($_POST['company']); }?>">
 		</label>
 
+<<<<<<< HEAD
+=======
+	
+	
+  
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 	<label for="email">
 		<span class="title"><span class="req">*</span>Email</span>
 		<input type="email" name="email" placeholder="Email" value="<?php 
@@ -98,17 +108,25 @@ if (isset($_POST['submit'])) {
 
 	</label>
 
+<<<<<<< HEAD
 	<!--<label for="salary"><span class="title">Salary Range</span>
+=======
+	<label for="salary"><span class="title">Salary Range</span>
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 		<select name="salary" id="">
 			<option value="$10,000 - $30,000">$10,000 - $30,000</option>
 			<option value="$40,000 - $60,000">$40,000 - $60,000</option>
 			<option value="$70,000 - $100,000">$70,000 - $100,000</option>
 		</select>
+<<<<<<< HEAD
 	</label>-->
    
    <label for="salary"><span class="title">Salary Range</span>
    	<input type="text" name="salary" placeholder="Salary"/>
    </label>
+=======
+	</label>
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 
 <label for="apply"><span class="title">Best way to apply</span>
 		<select name="apply" id="">
@@ -116,8 +134,15 @@ if (isset($_POST['submit'])) {
 			<option value="Website">Website</option>
 			<option value="Call">Call</option>
 		</select>
+<<<<<<< HEAD
 </label>
 
+=======
+	</label>
+
+  
+	
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 	<label for="date">
 		<span class="title">Start Date</span>
 		<input type="date" name="date" value="<?php if (isset($_POST['date'])) {htmlspecialchars($_POST['date']);} ?>">
@@ -130,7 +155,11 @@ if (isset($_POST['submit'])) {
 
 	<label for="description">
 		<span class="title">Description</span>
+<<<<<<< HEAD
 		<textarea placeholder="Description" name="description" class="message" cols="100" rows="7" maxlength="4000" value="<?php if(isset($_POST['description'])) {htmlspecialchars($_POST['description']);}  ?>"></textarea>
+=======
+		<textarea name="description" class="message" cols="100" rows="7" maxlength="4000" value="<?php if(isset($_POST['description'])) {htmlspecialchars($_POST['description']);}  ?>"></textarea>
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 		<span class="countdown"></span>
 	</label>
 

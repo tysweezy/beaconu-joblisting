@@ -13,8 +13,12 @@
     ],
     "require": {
         "wixel/gump": "dev-master",
+<<<<<<< HEAD
         "voodoophp/paginator" : "2.*",
         "swiftmailer/swiftmailer": "5.2.*@dev"
+=======
+        "voodoophp/paginator" : "2.*"
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 
     }
 }

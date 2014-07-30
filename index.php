@@ -1,16 +1,22 @@
 <?php
 
+<<<<<<< HEAD
 error_reporting(0);
 
 
+=======
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 require_once 'classes/Form.php';
 
 require 'vendor/autoload.php';
 
+<<<<<<< HEAD
 use Slim\Slim;
 
 $form = new Form();
 
+=======
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 $job = new \Slim\Slim();
 
 $job->config(array(
@@ -27,6 +33,7 @@ $job->get('/postjob', function() use ($job)  {
 
 $job->get('/apply/:id', function($id) use($job) {
 	//echo "Apply"; 
+<<<<<<< HEAD
 
 	$job->render('apply.php');
 
@@ -73,4 +80,37 @@ $job->get('/update/:id', function($id) use ($job) {
 
 
 $job->config('debug', false);
+=======
+	$form = new Form('sqlite:data/listings.db');
+	$job->render('apply.php');
+ 
+
+	 $query = $form->db->prepare('SELECT * FROM listings ORDER BY ID DESC');
+	 $query->execute();
+	 $rows = array();
+
+	    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+       	 $rows[] = $row;
+       }
+
+
+    if($rows) {
+    	foreach ($rows as $row) {
+    		if ($id == $row['id']) {
+    			
+    			echo '<div class="container">';
+    			echo $row['company'];
+    			echo '</div>';
+
+    			// Load a template??
+    		}
+    	}
+    }
+
+});
+
+
+$job->config('debug', true);
+
+>>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 $job->run();
