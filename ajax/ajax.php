@@ -1,10 +1,7 @@
 <?php
 require_once '../classes/Form.php';
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 $errors = array();
 $data = array();
 

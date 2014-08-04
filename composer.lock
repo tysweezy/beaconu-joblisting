@@ -4,7 +4,6 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
     "hash": "0d38511c6382b720fe419b0dfdd5168c",
     "packages": [
         {
@@ -13,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "62478c4c4ed84939a5457b15f9b978b58d0db849"
+                "reference": "7b048deea4ee9c49c70c40a15f4045f8dff765bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/62478c4c4ed84939a5457b15f9b978b58d0db849",
-                "reference": "62478c4c4ed84939a5457b15f9b978b58d0db849",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7b048deea4ee9c49c70c40a15f4045f8dff765bc",
+                "reference": "7b048deea4ee9c49c70c40a15f4045f8dff765bc",
                 "shasum": ""
             },
             "require": {
@@ -44,11 +43,13 @@
             ],
             "authors": [
                 {
-                    "name": "Chris Corbyn"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "name": "Chris Corbyn"
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
@@ -57,14 +58,9 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-07-28 09:34:50"
+            "time": "2014-06-13 11:45:24"
         },
         {
-=======
-    "hash": "31a36f5c6f54f48bf65cbe4255af55e6",
-    "packages": [
-        {
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
             "name": "voodoophp/paginator",
             "version": "2.0.0",
             "source": {
@@ -112,21 +108,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wixel/GUMP.git",
-<<<<<<< HEAD
-                "reference": "4ff5364bab3a7c004bf9f5aa4135c1c7b73092b8"
+                "reference": "67d4c65349a46f73032841ba72efd7139311c129"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wixel/GUMP/zipball/4ff5364bab3a7c004bf9f5aa4135c1c7b73092b8",
-                "reference": "4ff5364bab3a7c004bf9f5aa4135c1c7b73092b8",
-=======
-                "reference": "b16d1e40c4ff0d67522601c5f0b39b10cbb5b35a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Wixel/GUMP/zipball/b16d1e40c4ff0d67522601c5f0b39b10cbb5b35a",
-                "reference": "b16d1e40c4ff0d67522601c5f0b39b10cbb5b35a",
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
+                "url": "https://api.github.com/repos/Wixel/GUMP/zipball/67d4c65349a46f73032841ba72efd7139311c129",
+                "reference": "67d4c65349a46f73032841ba72efd7139311c129",
                 "shasum": ""
             },
             "type": "library",
@@ -141,14 +128,11 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
-=======
                     "name": "Rob Crowe",
                     "email": "hello@vivalacrowe.com",
                     "homepage": "http://vivalacrowe.com"
                 },
                 {
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
                     "name": "Colleen Emryss",
                     "homepage": "http://skitter.tv"
                 },
@@ -167,26 +151,11 @@
                 {
                     "name": "Inge Brattaas",
                     "homepage": "http://res.no/"
-<<<<<<< HEAD
-                },
-                {
-                    "name": "Sean Nieuwoudt",
-                    "homepage": "http://wixelhq.com"
-                },
-                {
-                    "name": "Rob Crowe",
-                    "homepage": "http://vivalacrowe.com"
-=======
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
                 }
             ],
             "description": "A fast, extensible & stand-alone PHP input validation class that allows you to validate any data",
             "homepage": "http://wixelhq.com/",
-<<<<<<< HEAD
-            "time": "2014-07-24 16:08:37"
-=======
-            "time": "2014-03-24 08:18:12"
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
+            "time": "2014-06-13 14:52:28"
         }
     ],
     "packages-dev": [
@@ -238,18 +207,6 @@
         },
         {
             "name": "twig/twig",
-<<<<<<< HEAD
-            "version": "v1.16.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fabpot/Twig.git",
-                "reference": "8ce37115802e257a984a82d38254884085060024"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/8ce37115802e257a984a82d38254884085060024",
-                "reference": "8ce37115802e257a984a82d38254884085060024",
-=======
             "version": "v1.15.1",
             "source": {
                 "type": "git",
@@ -260,7 +217,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/fabpot/Twig/zipball/1fb5784662f438d7d96a541e305e28b812e2eeed",
                 "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed",
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
                 "shasum": ""
             },
             "require": {
@@ -269,11 +225,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-<<<<<<< HEAD
-                    "dev-master": "1.16-dev"
-=======
                     "dev-master": "1.15-dev"
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
                 }
             },
             "autoload": {
@@ -308,11 +260,7 @@
             "keywords": [
                 "templating"
             ],
-<<<<<<< HEAD
-            "time": "2014-07-05 12:19:05"
-=======
             "time": "2014-02-13 10:19:29"
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
         }
     ],
     "aliases": [
@@ -320,12 +268,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-<<<<<<< HEAD
         "wixel/gump": 20,
         "swiftmailer/swiftmailer": 20
-=======
-        "wixel/gump": 20
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
     },
     "platform": [
 

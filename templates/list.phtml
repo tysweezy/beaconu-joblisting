@@ -1,21 +1,14 @@
 <a href="postjob" id="postJobBtn">Post a job</a>
 
-<<<<<<< HEAD
  
 <div class="scroll">
-=======
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
  {% for row in rows %}
  <div class="listing" id="{{ row.id }}">
  <div class="list-left">
 	<h2>{{ row.job_title }} <span class="company">@ {{ row.company }}</span></h2>
 	
 
-<<<<<<< HEAD
 	<p class="qualifications">Requirements: 
-=======
-	<p class="qualifications">Requirments: 
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 		{% if row.qualifications == false %}
 			None
 		{% else %}
@@ -26,19 +19,11 @@
 
 	<p>Posted by: <a href="mailto:{{ row.email }}">{{row.email}}</a></p>
 	<p>Salary Range: 
-<<<<<<< HEAD
 		{% if row.salaryrange == false %}
 			<span>N/A</span>
 
 		{% else %}
 			{{ row.salaryrange }} Per Year
-=======
-		{% if row.salary == false %}
-			<span>None</span>
-
-		{% else %}
-			{{ row.salary }} Per Year
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 		{% endif %}
 
 	</p>
@@ -58,17 +43,12 @@
  	 <span class="date">Start Date: 
 
  	 	{% if row.start_date == false %}
-<<<<<<< HEAD
  	 		<span>N/A</span>
-=======
- 	 		N/A
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 		{% else %}
  	 		{{ row.start_date }}
 		{% endif %}
  	 </span>
 
-<<<<<<< HEAD
  	    {% if row.apply == false %}
       	
       {% else %}
@@ -85,11 +65,6 @@
 
 
 
-=======
-  <a href="apply/{{row.id}}" class="applyBtn">Apply</a>
-
-
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 
  </div><!-- /list-right -->
 
@@ -98,10 +73,7 @@
 
 {% endfor %}
 
-<<<<<<< HEAD
 </div>
-=======
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 
 
 

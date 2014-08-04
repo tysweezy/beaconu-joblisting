@@ -23,7 +23,6 @@ class Form {
 	  * Constructor
 	  * Connects to database
 	  * @param string $_conn connection to database.
-<<<<<<< HEAD
 	  * $_conn will be removed if using MySQL
 	*/
 	public function __construct() {
@@ -39,6 +38,8 @@ class Form {
 	);
 
 
+
+	
     $local = "localhost:9000"; // start local php server at port 9000
 
     if ($_SERVER['HTTP_HOST'] == $local) {
@@ -51,7 +52,7 @@ class Form {
     }
 
 	  
-     try {
+    	  try {
  				
  	    $this->db = new PDO('mysql:host=' . $config['host'] . ';dbname='. $config['dbname'] . ';', $config['user'], $config['pass']) or die('cannot connect to database');
  	 		
@@ -59,19 +60,9 @@ class Form {
  	    die($e->getMessage());
  	  } 
 
-=======
-	*/
-	public function __construct($_conn) {
-      //$data = $this->db; //tried to shorten the object 
-		$this->_conn = $_conn;
-    	try {
- 				
- 				$this->db = new PDO($this->_conn) or die('cannot connect to database');
- 	 		
- 	 		} catch(PDOException $e) {
- 				die($e->getMessage());
- 	 		} 
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
+   	  // factory pattern?? 
+
+          //$search = new Search();
 	}
 
 
@@ -204,13 +195,8 @@ class Form {
 	**/
 	public function storeData() {
 
-<<<<<<< HEAD
       $data = $this->db->prepare('INSERT INTO listings (job_title, company, type, start_date, qualifications, description, email, salaryrange, apply) 
       	                         VALUES (:jobtitle, :company, :type, :start_date, :qualifications, :description, :email, :salaryrange, :apply)');
-=======
-      $data = $this->db->prepare('INSERT INTO listings (job_title, company, type, start_date, qualifications, description, email, salaryrange) 
-      	                         VALUES (:jobtitle, :company, :type, :start_date, :qualifications, :description, :email, :salaryrange)');
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 
       $data->bindParam(':jobtitle', $_POST['job-title'], PDO::PARAM_STR);
       $data->bindParam(':company', $_POST['company'], PDO::PARAM_STR);
@@ -220,7 +206,6 @@ class Form {
       $data->bindParam(':description', $_POST['description'], PDO::PARAM_STR);
       $data->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
       $data->bindParam(':salaryrange', $_POST['salary'], PDO::PARAM_STR);
-<<<<<<< HEAD
       $data->bindParam(':apply', $_POST['apply'], PDO::PARAM_STR); 
 
       $data->execute() or die($data->errorInfo()); 
@@ -245,22 +230,5 @@ class Form {
     	}
 	}
 
-=======
-
-
-
-      $data->execute();
-	
-	}
-
-	/**
-	  * Removes the data
-	**/
-	public function removeData() {
-		
-	}
-
-
->>>>>>> 25c093bcdad6385d73dcb8a44b94065d42a4b324
 }
 

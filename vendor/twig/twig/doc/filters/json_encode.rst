@@ -1,7 +1,7 @@
 ``json_encode``
 ===============
 
-The ``json_encode`` filter returns the JSON representation of a value:
+The ``json_encode`` filter returns the JSON representation of a string:
 
 .. code-block:: jinja
 
