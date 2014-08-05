@@ -18,12 +18,51 @@ $job->config(array(
 ));
 
 $job->get('/', function() use ($job) {
-	$job->render('listings.php');
+	//$job->render('listings.php');
+
+	$job->render("home.php");
+
+
 });
 
-$job->get('/postjob', function() use ($job)  {
-	$job->render('postjob.php');
+
+// listings refactor
+$job->get('/listings', function() {
+  $form = new Form();
+  $form->getAllData();
 });
+
+// postjob refactor
+$job->post('/storejob', function() {
+
+ $form = new Form();
+ $form->storeData();
+});
+
+//=== --- OLD POST JOB. Keeping for now for functionality
+$job->get('/postjob', function() use ($job)  {
+   
+    /*$admin = (array(
+      'username' => 'Bacon',
+      'password' => md5('bacon')
+    ));*/
+
+    if($admin) {
+      session_start();
+
+
+	 $job->render('postjob.php');
+    } else {
+    session_destroy();
+     $employerLogin = 'http://' . $_SERVER['HTTP_HOST'] . '#/employer/login';
+
+      $job->redirect($employerLogin);
+    }
+});
+
+/*$job->get('/employer-login', function() use($job) {
+  $job->render('partials/employer-login.html');
+});*/
 
 $job->get('/apply/:id', function($id) use($job) {
 	//echo "Apply"; 

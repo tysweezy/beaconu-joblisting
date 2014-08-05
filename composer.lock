@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "7b048deea4ee9c49c70c40a15f4045f8dff765bc"
+                "reference": "62478c4c4ed84939a5457b15f9b978b58d0db849"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7b048deea4ee9c49c70c40a15f4045f8dff765bc",
-                "reference": "7b048deea4ee9c49c70c40a15f4045f8dff765bc",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/62478c4c4ed84939a5457b15f9b978b58d0db849",
+                "reference": "62478c4c4ed84939a5457b15f9b978b58d0db849",
                 "shasum": ""
             },
             "require": {
@@ -43,13 +43,11 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "name": "Chris Corbyn"
                 },
                 {
-                    "name": "Chris Corbyn"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
@@ -58,7 +56,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-06-13 11:45:24"
+            "time": "2014-07-28 09:34:50"
         },
         {
             "name": "voodoophp/paginator",
@@ -108,12 +106,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wixel/GUMP.git",
-                "reference": "67d4c65349a46f73032841ba72efd7139311c129"
+                "reference": "4ff5364bab3a7c004bf9f5aa4135c1c7b73092b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wixel/GUMP/zipball/67d4c65349a46f73032841ba72efd7139311c129",
-                "reference": "67d4c65349a46f73032841ba72efd7139311c129",
+                "url": "https://api.github.com/repos/Wixel/GUMP/zipball/4ff5364bab3a7c004bf9f5aa4135c1c7b73092b8",
+                "reference": "4ff5364bab3a7c004bf9f5aa4135c1c7b73092b8",
                 "shasum": ""
             },
             "type": "library",
@@ -127,11 +125,6 @@
                 "MIT"
             ],
             "authors": [
-                {
-                    "name": "Rob Crowe",
-                    "email": "hello@vivalacrowe.com",
-                    "homepage": "http://vivalacrowe.com"
-                },
                 {
                     "name": "Colleen Emryss",
                     "homepage": "http://skitter.tv"
@@ -151,11 +144,19 @@
                 {
                     "name": "Inge Brattaas",
                     "homepage": "http://res.no/"
+                },
+                {
+                    "name": "Sean Nieuwoudt",
+                    "homepage": "http://wixelhq.com"
+                },
+                {
+                    "name": "Rob Crowe",
+                    "homepage": "http://vivalacrowe.com"
                 }
             ],
             "description": "A fast, extensible & stand-alone PHP input validation class that allows you to validate any data",
             "homepage": "http://wixelhq.com/",
-            "time": "2014-06-13 14:52:28"
+            "time": "2014-07-24 16:08:37"
         }
     ],
     "packages-dev": [
@@ -207,16 +208,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.15.1",
+            "version": "v1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed"
+                "reference": "8ce37115802e257a984a82d38254884085060024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/1fb5784662f438d7d96a541e305e28b812e2eeed",
-                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/8ce37115802e257a984a82d38254884085060024",
+                "reference": "8ce37115802e257a984a82d38254884085060024",
                 "shasum": ""
             },
             "require": {
@@ -225,7 +226,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.16-dev"
                 }
             },
             "autoload": {
@@ -260,7 +261,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2014-02-13 10:19:29"
+            "time": "2014-07-05 12:19:05"
         }
     ],
     "aliases": [

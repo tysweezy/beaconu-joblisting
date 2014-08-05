@@ -78,72 +78,21 @@ class Form {
 	**/
 	public function getAllData() {
 
+      try {
+		$query = $this->db->prepare('SELECT * FROM listings ORDER BY ID DESC');
+		 $query->execute();
+		 $rows = array();
+		 /*$loader = new Twig_Loader_Filesystem('./templates');
+	     $twig = new Twig_Environment($loader);*/
+	     
+	     $listings = $query->fetchAll(PDO::FETCH_OBJ);
 
-	 $query = $this->db->prepare('SELECT * FROM listings ORDER BY ID DESC');
-	 $query->execute();
-	 $rows = array();
-	 $loader = new Twig_Loader_Filesystem('./templates');
-     $twig = new Twig_Environment($loader);
-
-	 if ($query) {
-	 	// get all rows
-	 	while($row = $query->fetch(PDO::FETCH_ASSOC)) {
-	 		 $rows[] = $row;
-	 	}
-
-	 	if ($rows) {
-	 	  //foreach($rows as $list) {}
-		  $template = $twig->loadTemplate('list.phtml');
-         echo $template->render(array (
-          	'rows' => $rows
-          ));
-
-
-	 	} else {
-	 	  // display template if no results.
-	 	  $nores = $twig->loadTemplate('nolist.phtml');
-	 	  echo $nores->render(array(
-	 	  	'rows' => $rows 
-	 	  )); 	
-	 	}
+	     echo json_encode($listings);
+	 } catch (PDOException $e) {
+       echo '{"error":{"text":'. $e->getMessage() .'}}';
 	 }
-	}
 
-
- public function retrieveApply() {
-
-
-	 $query = $this->db->prepare('SELECT * FROM listings ORDER BY ID DESC');
-	 $query->execute();
-	 $rows = array();
-	 $loader = new Twig_Loader_Filesystem('./templates');
-     $twig = new Twig_Environment($loader);
-
-	 if ($query) {
-	 	// get all rows
-	 	while($row = $query->fetch(PDO::FETCH_ASSOC)) {
-	 		 $rows[] = $row;
-
-	 		
-	 	}
-
-	 	/*if ($rows) {
 	 
-		  $template = $twig->loadTemplate('apply.phtml');
-         echo $template->render(array (
-          	'rows'           => $rows
-           ));
-
-
-
-	 	} else {
-	 	  
-	 	  $nores = $twig->loadTemplate('nolist.phtml');
-	 	  echo $nores->render(array(
-	 	  	'rows' => $rows 
-	 	  )); 	
-	 	}*/
-	 }
 	}
 
   /***

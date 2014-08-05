@@ -32,7 +32,7 @@ require_once 'vendor/autoload.php';
 
 	
 
-	<h1 id="page-title">Job Listings // Bacon</h1>
+	<h1 id="page-title">Job Listings</h1>
 </header>
 <?php
 	$form = new Form();
