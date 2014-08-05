@@ -31,10 +31,10 @@ class Form {
 	
 	// $config array handles config settings for mysql.
 	$config = array(
-	  'host'     => 'internal-db.s42451.gridserver.com',
-	  'dbname'   => 'db42451_beaconu',
-	  'user'     => 'db42451_insource',
-	  'pass'     => 'd3ciPH3r*1' 
+	  'host'     => 'bacon',
+	  'dbname'   => 'bacon',
+	  'user'     => 'bacon',
+	  'pass'     => 'bacon' 
 	);
 
 
@@ -44,10 +44,10 @@ class Form {
 
     if ($_SERVER['HTTP_HOST'] == $local) {
 	     $config = array(
-		  'host'     => 'localhost',
-		  'dbname'   => 'listings',
-		  'user'     => 'root',
-		  'pass'     => 'ty12rays' 
+		  'host'     => 'bacon',
+		  'dbname'   => 'bacon',
+		  'user'     => 'bacon',
+		  'pass'     => 'bacon' 
 		);
     }
 
